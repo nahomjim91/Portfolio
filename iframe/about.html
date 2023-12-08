@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 4px;
+        box-sizing: border-box;
+        background-color: #354249;
+        font-family: Elsie;
+      }
+      .about {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-areas:
+          " header header"
+          "paragraph paragraph" "language Skill ";
+        flex-direction: column;
+        color: white;
+      }
+      .about > h2 {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+        grid-area: header;
+      }
+      .about > p {
+        font-size: 18px;
+        grid-area: paragraph;
+        text-align: justify !important;
+      }
+      span {
+        color: red !important;
+      }
+      .SKill_container {
+        grid-area: Skill;
+        width: 80%;
+      }
+
+      .container {
+        border-radius: 40px;
+        width: 100%;
+        background-color: #303a40;
+      }
+      .skillset {
+        text-align: right;
+        color: #fff;
+        padding-right: 5px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+      .SKill_container > p {
+        margin-bottom: 1px;
+        font-size: 17px;
+      }
+      .UI_UX {
+        width: 60%;
+        border-radius: 40px;
+        background-color: #de5454;
+      }
+      .Front-End {
+        width: 70%;
+        border-radius: 40px;
+        background-color: #ccde54;
+      }
+      .Back-End {
+        width: 45%;
+        border-radius: 40px;
+        background-color: #5dde54;
+      }
+      .Mobile_Dev {
+        width: 10%;
+        border-radius: 40px;
+        background-color: #de5454;
+      }
+      h3 {
+        font-size: 27px;
+      }
+      .lang {
+        grid-area: language;
+      }
+      .lang > h3 {
+        position: relative;
+        left: 10%;
+      }
+      .lang > ul {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
+      li {
+        list-style-type: none;
+      }
+      .lang > ul > li {
+        width: 110px;
+        height: 40px;
+        margin: 10px;
+        background-color: #303a40;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        filter: drop-shadow(10px 10px 10px #303a);
+      }
+      .lang > ul > li:hover {
+        filter: drop-shadow(10px 10px 10px rgba(195, 60, 78, 0.667));
+      }
+      @media (max-width: 768px) {
+        .about > h2 {
+          font-size: 40px;
+        }
+        .about > p {
+          font-size: 16px;
+          padding: 0px 10px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        .lang > ul > li {
+          width: 90px;
+          height: 35px;
+        }
+        @media (max-width: 400px) {
+          body{
+            padding: 0px 20px;
+          }
+          .about>p{
+            text-align: justify;
+            /* color: #303a40; */
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about">
+      <h2><span>A</span>bout Me</h2>
+      <p>
+        As a passionate computer science student, I thrive on the symphony of
+        code, the strategic dance of chess, and the exhilarating challenge of
+        coding competitions. My love for play, whether it's scoring goals,
+        mastering games, or crafting delightful UI/UX designs, fuels my creative
+        spirit. When not immersed in the digital world, you'll find me savoring
+        the art of solitude, strolling through the quiet realms of
+        introspection, and occasionally taking a detour to whip up a culinary
+        masterpiece. Welcome to my world, where the love for technology, games,
+        design, and the simple joys of solitary walks converge!"
+      </p>
+      <div class="lang">
+        <h3>Language</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+          <li>C++</li>
+          <li>C#</li>
+          <li>JAVA</li>
+          <li>JS Framework</li>
+        </ul>
+      </div>
+      <div class="skills">
+        <h3>Skills</h3>
+        <div class="SKill_container">
+          <p>UI/UX</p>
+          <div class="container">
+            <div class="UI_UX skillset">60%</div>
+          </div>
+
+          <p>Front-End</p>
+          <div class="container">
+            <div class="Front-End skillset">70%</div>
+          </div>
+
+          <p>Back-End</p>
+          <div class="container">
+            <div class="Back-End skillset">45%</div>
+          </div>
+
+          <p>Mobile Dev</p>
+          <div class="container">
+            <div class="Mobile_Dev skillset">10%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

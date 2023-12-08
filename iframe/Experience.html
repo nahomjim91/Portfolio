@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Elsie;
+        perspective: 800px;
+      }
+      body {
+        background-color: #354249;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #fff;
+       
+      }
+      .header > span {
+        color: red;
+      }
+      .header {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+      }
+      .timeline {
+        width: 100%;
+        height: 100%;
+        background-color: #354249;
+        color: #fff;
+        margin: 20px 20px;
+        padding: 50px;
+      }
+      .timeline ul {
+        list-style-type: none;
+        border-top: 4px solid #af1429;
+        z-index: 1;
+        padding: 10px 5px;
+        display: flex;
+      }
+      .timeline ul li {
+        flex: 1;
+        padding: 20px 20px;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s;
+        opacity: 0.3;
+      }
+      .timeline ul li span {
+        display: inline-block;
+        background-color: #b81616;
+        border-radius: 25px;
+        padding: 2px 5px;
+        font-size: 15px;
+        text-align: center;
+      }
+      .timeline ul li .content h3 {
+        color: #34ace0;
+        font-size: 17px;
+        padding-top: 5px;
+      }
+      .timeline ul li .content p {
+        padding: 5px 0px 15px 0px;
+        font-size: 15px;
+      }
+      .timeline ul li:before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #c1cbd0;
+        border-radius: 50%;
+        top: -15px;
+        transition: 0.5s;
+        z-index: 10;
+      }
+      .timeline ul li:hover {
+        background-color: #303a40;
+        border-radius: 20px;
+        opacity: 1;
+      }
+      .timeline ul li:hover:before {
+        background-color: #0f0;
+        box-shadow: 0px 0px 10px 2px #0f0;
+      }
+      @media (max-width: 400px) {
+        .timeline {
+          width: 100%;
+          padding: 30px 5px 30px 10px;
+        }
+        .timeline ul li .content h3 {
+          color: #34ace0;
+          font-size: 15px;
+        }
+        .timeline ul {
+          border-left: 4px solid #af1429;
+          border-top: none;
+          display: block;
+        }
+        .timeline ul li:before {
+          left: -11px;
+          top: 28px;
+          transition: 0.5s;
+        }
+        .header {
+          display: flex;
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3 class="header"><span>M</span>y Experience</h3>
+
+    <d3iv class="timeline">
+      <ul>
+        <li>
+          <span>3rd January 2020</span>
+          <div class="content">
+            <h3>What Is Lorem Ipsum?</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>21st Jun 2019</span>
+          <div class="content">
+            <h3>What Is Lorem Ipsum?</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>15th April 2018</span>
+          <div class="content">
+            <h3>What Is Lorem Ipsum?</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>22nd Mars 2017</span>
+          <div class="content">
+            <h3>What Is Lorem Ipsum?</h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </d3iv>
+  </body>
+</html>

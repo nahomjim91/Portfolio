@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #354249;
+        font-family: Elsie;
+        color: white;
+      }
+      .main {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      .aside {
+        flex: 1;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .header > span {
+        color: red;
+      }
+      .header {
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 40px;
+        font-size: 50px;
+        grid-area: header;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+      }
+      .input_box {
+        position: relative;
+        margin: 16px 0;
+      }
+      .input_box input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: 2px solid #2c4766;
+        outline: none;
+        border-radius: 40px;
+        font-size: 1em;
+        color: #fff;
+        padding: 0 20px;
+        transition: 0.5s;
+      }
+      .input_message {
+        width: 100%;
+        height: 150px;
+        background: transparent;
+        border: 2px solid #2c4766;
+        outline: none;
+        border-radius: 40px;
+        font-size: 1.2em;
+        color: #fff;
+        padding: 3px 20px;
+        transition: 0.5s;
+        resize: none;
+      }
+
+      .input_box input:focus,
+      .input_box input:valid,
+      .input_message:focus,
+      .input_message:valid {
+        border-color: red;
+      }
+      .input_box label {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        pointer-events: none;
+        transition: 0.5s ease;
+      }
+      .input_box input:focus ~ label,
+      .input_box input:valid ~ label,
+      .input_box #message:focus ~ #labelmessage,
+      .input_box #message:valid ~ #labelmessage {
+        top: 1px;
+        font-size: 0.8em;
+        background-color: #354249;
+        padding: 0 6px;
+        color: #ffffff;
+      }
+      .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        width: 60%;
+        height: 30px;
+        border-radius: 45px;
+        background: rgb(204, 132, 132);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1em;
+        color: #112932;
+        font-weight: 600;
+      }
+      .btn:hover{
+        filter: drop-shadow(10px 10px 10px rgb(207, 27, 27));
+      }
+      .img {
+        flex: 1;
+        background-image: url(../image/Mapsicle\ Map.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="aside">
+        <h3 class="header"><span>C</span>ontact Me</h3>
+        <form action="">
+          <div class="input_box">
+            <input type="text" required />
+            <label>Name</label>
+          </div>
+          <div class="input_box">
+            <input type="text" required />
+            <label>Email</label>
+          </div>
+          <div class="input_box">
+            <textarea
+              class="input_message"
+              name="message"
+              id="message"
+              required
+            ></textarea>
+            <label for="message" id="labelmessage" name>Message</label>
+          </div>
+          <div class="button">
+            <input
+              type="submit"
+              class="btn"
+              value="submit"
+              placeholder="submit"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="img"></div>
+    </div>
+  </body>
+</html>

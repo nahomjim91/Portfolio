@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 14px;
+        box-sizing: border-box;
+        background-color: #354249;
+        font-family: Elsie;
+        color: white;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-areas: "header" "project_work" "button";
+      }
+      .wrapper > h2 {
+        text-align: center;
+        grid-area: header;
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+      }
+
+      .project_work {
+        display: flex;
+        grid-area: project_work;
+        justify-content: center;
+        position: relative;
+      }
+      .card {
+        border-radius: 16px;
+        margin: 20px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        float: left;
+        width: 25%;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+        margin: 40px 10px 0px 20px;
+      }
+      .card:hover {
+        transform: scale(1.05);
+      }
+      .card > img {
+        padding: 0;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur();
+        transition: filter 0.3s;
+      }
+      .card:hover img {
+        filter: blur(2px);
+      }
+      .details {
+        border-radius: 16px;
+        position: absolute;
+        text-align: center;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        width: 93%;
+        margin: 2%;
+        margin-bottom: 5%;
+        padding: 4px;
+        background: rgba(40, 40, 40, 0.7);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .details > p {
+        position: relative;
+        top: 40%;
+      }
+
+      .card:hover .details {
+        opacity: 1;
+      }
+      .wrapper > .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: button;
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+      }
+      .button > button {
+        background-color: #283035;
+        border: none;
+        width: 100px;
+        height: 100%;
+        border-radius: 25px;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        text-decoration: none !important;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      button:hover {
+        background-color: #a31b1b;
+        transform: scale(1.05);
+        filter: drop-shadow(5px 5px 5px rgb(221, 56, 56));
+      }
+      @media (max-width: 768px) {
+        
+        .wrapper > h2 {
+          font-size: 40px;
+        }
+        .project_work{
+          display: flex ;
+        }
+        .card {
+          width: 50%;
+          float: none;
+
+          margin: 50px 10px 0px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2><span style="color: red">P</span>roject</h2>
+      <div class="project_work">
+        <div class="card">
+          <img src="../image/Rectangle-1.png" alt="" />
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis rem, maxime voluptates incidunt aspernatur
+              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
+              cumque odio mollitia quis quam quisquam neque.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../image/Rectangle-2.png" alt="" />
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis rem, maxime voluptates incidunt aspernatur
+              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
+              cumque odio mollitia quis quam quisquam neque.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../image/Rectangle.png" alt="" />
+          <div class="details">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis rem, maxime voluptates incidunt aspernatur
+              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
+              cumque odio mollitia quis quam quisquam neque.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="button"><button>More</button></div>
+    </div>
+  </body>
+</html>
