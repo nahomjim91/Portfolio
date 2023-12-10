@@ -47,6 +47,7 @@
         border-radius: 40px;
         width: 100%;
         background-color: #303a40;
+        box-shadow: #0a5482  1px 1px 1px 1px;
       }
       .skillset {
         text-align: right;
@@ -135,6 +136,21 @@
             text-align: justify;
             /* color: #303a40; */
           }
+        }
+        @media (max-width: 420px) {
+          body{
+            overflow-x: hidden;
+          }
+          .about{
+            grid-template-areas:  " header "
+          "paragraph " "language"" Skill ";
+          grid-template-rows: 0fr 0fr 0.5fr 1fr;
+          }
+          .skills{
+            margin-left: 10px;
+            width: 360px;
+          }
+          
         }
       }
     </style>

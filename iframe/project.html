@@ -32,57 +32,108 @@
         position: relative;
       }
       .card {
-        border-radius: 16px;
-        margin: 20px;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        flex-direction: column;
-        float: left;
-        width: 25%;
+        /* border-radius: 16px;
+             margin: 20px;
+             display: flex;
+             height: 350px;
+             flex-direction: column;
+             float: left;
+             width: 25%;
+             position: relative;
+             overflow: hidden;
+             transition: transform 0.3s;
+             margin: 40px 10px 0px 20px; */
+        width: 250px;
+        height: 360px;
+        border-radius: 15px;
+        padding: 1.5rem;
+        background: white;
         position: relative;
-        overflow: hidden;
-        transition: transform 0.3s;
-        margin: 40px 10px 0px 20px;
+        display: flex;
+        align-items: flex-end;
+        transition: 0.4s ease-out;
+        box-shadow: 0px 7px 10px rgba(black, 0.5);
       }
+      /* delete after fro mobiel */
       .card:hover {
-        transform: scale(1.05);
+        transform: translateY(20px);
       }
-      .card > img {
-        padding: 0;
-        border-radius: 16px;
+      .card:hover::before {
+        opacity: 1;
+      }
+      .card:hover .details {
+        opacity: 1;
+        transform: translate();
+      }
+      .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        filter: blur();
-        transition: filter 0.3s;
+        border-radius: 15px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        transition: 0.5s;
+        opacity: 0;
       }
-      .card:hover img {
-        filter: blur(2px);
+      .card > img {
+        width: 100%;
+        height: 100%;
+        object-fit: flii;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 15px;
       }
+
       .details {
+        /* border: red solid 1px;
         border-radius: 16px;
         position: absolute;
         text-align: center;
         height: 100%;
         bottom: 0;
         left: 0;
-        width: 93%;
+        width: 100%;
         margin: 2%;
         margin-bottom: 5%;
         padding: 4px;
         background: rgba(40, 40, 40, 0.7);
         color: #fff;
         opacity: 0;
-        transition: opacity 0.3s;
+        transition: opacity 0.3s; */
+        position: relative;
+        z-index: 3;
+        color: white;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: 0.5s;
       }
       .details > p {
-        position: relative;
-        top: 40%;
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin-top: 8px;
       }
-
-      .card:hover .details {
-        opacity: 1;
+      .details > button {
+        padding: 0.6rem;
+        outline: none;
+        border: none;
+        border-radius: 3px;
+        background: white;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s ease;
+      }
+      .details > button:hover {
+        background: rgb(144, 39, 39);
+        color: white;
+      }
+      a{
+        text-decoration: none;
       }
       .wrapper > .button {
         display: flex;
@@ -111,18 +162,39 @@
         filter: drop-shadow(5px 5px 5px rgb(221, 56, 56));
       }
       @media (max-width: 768px) {
-        
+        body {
+          overflow-x: hidden;
+        }
         .wrapper > h2 {
           font-size: 40px;
         }
-        .project_work{
-          display: flex ;
+        .project_work {
+          display: flex;
         }
         .card {
-          width: 50%;
           float: none;
-
+          width: 50px;
           margin: 50px 10px 0px 10px;
+        }
+        .card:hover{
+          padding: 0;
+          z-index: 100;
+          width: 300px;
+        }
+      }
+      @media (max-width: 420px) {
+        body {
+          overflow-x: hidden;
+        }
+        .project_work {
+          display: flex;
+          flex-direction: column;
+          left: 15%;
+        }
+        .card {
+          width: 60%;
+        }
+        .button {
         }
       }
     </style>
@@ -132,36 +204,53 @@
       <h2><span style="color: red">P</span>roject</h2>
       <div class="project_work">
         <div class="card">
-          <img src="../image/Rectangle-1.png" alt="" />
+          <img src="../image/BinarySearchTree.jpg" alt="" />
           <div class="details">
+            <h3>BinarySearchTree</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis rem, maxime voluptates incidunt aspernatur
-              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
-              cumque odio mollitia quis quam quisquam neque.
+              BinarySearchTree is a Data Srtucture using C++ project that lets
+              you explore binary search trees with insertion, deletion, and
+              search operations. It's designed for both simplicity and
+              functionality, making it a practical tool for learning about this
+              fundamental data structure.
             </p>
+            <button>
+              <a href="https://github.com/nahomjim91/BinarySearchTree.git"
+                >Deitails</a
+              >
+            </button>
           </div>
         </div>
         <div class="card">
-          <img src="../image/Rectangle-2.png" alt="" />
+          <img src="../image/AfroNFT.jpg" alt="" />
           <div class="details">
+            <h3>Afro NFTS</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis rem, maxime voluptates incidunt aspernatur
-              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
-              cumque odio mollitia quis quam quisquam neque.
+              "Afro NFTS": Dive into the vibrant world of Afro-centric NFTs with
+              this user-friendly Windows application. Create, buy, sell, and
+              showcase unique digital art and expressions, seamlessly integrated
+              with blockchain technology.
             </p>
+            <button>
+              <a href="https://github.com/nahomjim91/AfroNFTs.git">Deitails</a>
+            </button>
           </div>
         </div>
         <div class="card">
-          <img src="../image/Rectangle.png" alt="" />
+          <img src="../image/./scheduling_alogrithm.jpg" alt="" />
           <div class="details">
+            <h3>Schedule Algorithm</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis rem, maxime voluptates incidunt aspernatur
-              reiciendis. Quia veniam, eligendi nulla, ut dicta facere optio
-              cumque odio mollitia quis quam quisquam neque.
+              Tame your time with "Schedule Algorithm," a web app that organizes
+              tasks, appointments, and events with AI-powered efficiency.
+              Real-time updates and user-friendly design make scheduling a
+              breeze.
             </p>
+            <button>
+              <a href="https://github.com/nahomjim91/Scheduling-algorithm-.git"
+                >Deitails</a
+              >
+            </button>
           </div>
         </div>
       </div>

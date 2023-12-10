@@ -34,7 +34,7 @@
         padding: 0;
         margin: 0;
         position: absolute;
-        top: 40px;
+        top: 5%;
         font-size: 50px;
         grid-area: header;
       }
@@ -124,6 +124,21 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+      @media (max-width: 768px) {
+        .header{
+          font-size: 40px;
+        }
+        form{
+        justify-content: center;
+          position: relative;
+          right: 5%;
+        }
+      }
+      @media (max-width: 420px) {
+        .img{
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -152,8 +167,7 @@
             <input
               type="submit"
               class="btn"
-              value="submit"
-              placeholder="submit"
+              value="Submit"
             />
           </div>
         </form>
