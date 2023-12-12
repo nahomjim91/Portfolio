@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+
     <style>
       body {
         padding: 0;
         margin: 4px;
         box-sizing: border-box;
         background-color: #354249;
-        font-family: Elsie;
+        font-family: 'Lora'
       }
       .about {
         display: grid;
@@ -20,7 +22,7 @@
           " header header"
           "paragraph paragraph" "language Skill ";
         flex-direction: column;
-        color: white;
+        color: lightgray;
       }
       .about > h2 {
         padding: 0;
@@ -48,7 +50,7 @@
         border-radius: 40px;
         width: 100%;
         background-color: #303a40;
-        box-shadow: #0a5482  1px 1px 1px 1px;
+        box-shadow: #0a5482 1px 1px 1px 1px;
       }
       .skillset {
         text-align: right;
@@ -130,28 +132,28 @@
           height: 35px;
         }
         @media (max-width: 400px) {
-          body{
+          body {
             padding: 0px 20px;
           }
-          .about>p{
+          .about > p {
             text-align: justify;
             /* color: #303a40; */
           }
         }
         @media (max-width: 420px) {
-          body{
+          body {
             overflow-x: hidden;
           }
-          .about{
-            grid-template-areas:  " header "
-          "paragraph " "language"" Skill ";
-          grid-template-rows: 0fr 0fr 0.5fr 1fr;
+          .about {
+            grid-template-areas:
+              " header "
+              "paragraph " "language" " Skill ";
+            grid-template-rows: 0fr 0fr 0.5fr 1fr;
           }
-          .skills{
+          .skills {
             margin-left: 10px;
             width: 360px;
           }
-          
         }
       }
     </style>

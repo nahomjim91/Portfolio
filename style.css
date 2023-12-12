@@ -6,7 +6,8 @@
 body {
   background-color: #363c3f;
   font-family: robot;
-  color: white;
+  color: lightgray;
+  font-family: 'Lora'
 }
 
 .body {
